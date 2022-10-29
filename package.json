@@ -1,0 +1,22 @@
+{
+  "name": "bfx-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quochungphp/bfx-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quochungphp/bfx-challenge/issues"
+  },
+  "homepage": "https://github.com/quochungphp/bfx-challenge#readme",
+  "dependencies": {
+    "grenache-nodejs-link": "^0.7.12"
+  }
+}
