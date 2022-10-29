@@ -59,8 +59,14 @@ Transaction Order list: [
 ```
 # Explanation with my understanding
 ``` My understanding
+Solution 1:
 I have orderBook(orderTable) that contains user's order request. Every order request I will push to orderBook.
 After that, I check next incoming order request and compare with previous order in orderBook for example:
 - If incoming request adapts with previous order between buyer/seller, I will move both of them to transactionOrder.
 - Finally I have a couple order of Seller and Buyer and I remove out previous order from orderBook.
+Hint: The transactionOrder, I use transactionOrder to save matched order of buyer and seller and remained orders that saves in orderBook.
+
+Solution 2: 
+Base on concept of solution 1, I would like to add a sort orderBook by orderId or createdAt to get prioritize order that comes first.
+And then we can check it with incoming order request.
 ```
