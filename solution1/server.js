@@ -29,6 +29,10 @@ setInterval(() => {
 
 service.on('request', (rid, key, payload, handler) => {
   if(payload === 'getOrderInfo') {
+    handler.reply(null, orderBook);
+    return;
+  }
+  if(payload === 'getTransactionInfo') {
     handler.reply(null, transactionOrder);
     return;
   }

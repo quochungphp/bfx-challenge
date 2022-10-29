@@ -48,7 +48,20 @@ const requestOrderInfo = () => {
     "getOrderInfo",
     { timeout: 100000 },
     (err, result) => {
-      console.log("Order list:", result);
+      console.log("=================Order list=================\n");
+      console.log("Remained Order list:", result);
+    }
+  );
+};
+
+const requestTransactionInfo = () => {
+  peer.request(
+    "fibonacci_worker",
+    "getTransactionInfo",
+    { timeout: 100000 },
+    (err, result) => {
+      console.log("=================Transaction list=================\n");
+      console.log("Transaction Order list:", result);
     }
   );
 };
@@ -76,6 +89,7 @@ let i = 1;
     );
     if (i === requestOrders.length) {
       requestOrderInfo();
+      requestTransactionInfo();
     }
     i++;
     await waitTime(1000)
