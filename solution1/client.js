@@ -78,7 +78,7 @@ let i = 1;
       payload,
       { timeout: 100000 },
       (err, result) => {
-        // if (err) throw err
+        if (err !== null) throw err
         console.log(
           "Order request at place",
           payload.number,
@@ -94,4 +94,6 @@ let i = 1;
     i++;
     await waitTime(1000)
   }
+  console.log("=================Stop=================\n");
+  process.exit(-1);
 })();
