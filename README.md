@@ -61,6 +61,6 @@ Transaction Order list: [
 ``` My understanding
 I have orderBook(orderTable) that contains user's order request. Every order request I will push to orderBook.
 After that, I check next incoming order request and compare with previous order in orderBook for example:
-- If incoming request adapts with previous order between buyer/seller, I will move it both  of them to transactionOrder.
-- Finally I have a couple order of Seller and Buyer and I remove out previous oder from orderBook.
+- If incoming request adapts with previous order between buyer/seller, I will move both of them to transactionOrder.
+- Finally I have a couple order of Seller and Buyer and I remove out previous order from orderBook.
 ```
