@@ -46,6 +46,20 @@ const requestOrders = [
     orderType: "BUY",
     amount: 2,
   },
+  {
+    userId: 5,
+    orderId: 9, 
+    coin: "BTC",
+    orderType: "BUY",
+    amount: 2,
+  },
+  {
+    userId: 6,
+    orderId: 8, 
+    coin: "BTC",
+    orderType: "BUY",
+    amount: 2,
+  },
 ];
 const requestOrderInfo = () => {
   peer.request(

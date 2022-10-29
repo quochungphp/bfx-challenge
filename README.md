@@ -4,7 +4,7 @@
     $ node solution1/server.js
     $ node solution1/client.js
 ```
-# Result
+# Result output solution 1:
 ```
 hungle@Hungs-MacBook-Pro bfx-challenge % node solution1/client.js
 Order request at place 1 in the sequence: 8
@@ -55,7 +55,122 @@ Transaction Order list: [
     }
   }
 ]
+```
+# Result output solution 2:
+```
+hungle@Hungs-MacBook-Pro bfx-challenge % node solution2/client.js
+Order request at place 1 in the sequence: [ 8 ]
+Order request at place 2 in the sequence: [ 3 ]
+Order request at place 3 in the sequence: [
+  {
+    userId: 1,
+    orderId: 1,
+    coin: 'BTC',
+    orderType: 'BUY',
+    amount: 5,
+    orderedAt: 1667056437499,
+    number: 1,
+    requestId: 'edcd2f0b-ba9d-40fd-bd7f-e0c71e348677',
+    listener: 'fibonacci_worker',
+    sequence: 8,
+    partner: {
+      userId: 3,
+      orderId: 3,
+      coin: 'BTC',
+      orderType: 'SALE',
+      amount: 5,
+      orderedAt: 1667056437704,
+      number: 3,
+      requestId: 'df0b60a3-5cd9-4077-9c33-d8863d487838',
+      listener: 'fibonacci_worker',
+      sequence: 8
+    }
+  }
+]
+Order request at place 4 in the sequence: [ 2 ]
+Order request at place 5 in the sequence: [ 2 ]
+Order request at place 6 in the sequence: [ 2 ]
+=================Order list=================
 
+Remained Order list: [
+  {
+    userId: 2,
+    orderId: 2,
+    coin: 'BTC',
+    orderType: 'BUY',
+    amount: 3,
+    orderedAt: 1667056437602,
+    number: 2,
+    requestId: 'e79501bc-efa0-42ce-a323-029111277c8d',
+    listener: 'fibonacci_worker',
+    sequence: 3
+  },
+  {
+    userId: 4,
+    orderId: 4,
+    coin: 'BTC',
+    orderType: 'BUY',
+    amount: 2,
+    orderedAt: 1667056437805,
+    number: 4,
+    requestId: 'f8bbffb7-8d7a-4d47-ba85-bd4ae21c6139',
+    listener: 'fibonacci_worker',
+    sequence: 2
+  },
+  {
+    userId: 6,
+    orderId: 8,
+    coin: 'BTC',
+    orderType: 'BUY',
+    amount: 2,
+    orderedAt: 1667056438009,
+    number: 6,
+    requestId: '23ba63c1-6689-4366-9945-46a118d22814',
+    listener: 'fibonacci_worker',
+    sequence: 2
+  },
+  {
+    userId: 5,
+    orderId: 9,
+    coin: 'BTC',
+    orderType: 'BUY',
+    amount: 2,
+    orderedAt: 1667056437907,
+    number: 5,
+    requestId: '57fef023-524f-4623-8c7d-a93ba50ce554',
+    listener: 'fibonacci_worker',
+    sequence: 2
+  }
+]
+=================Transaction list=================
+
+Transaction Order list: [
+  {
+    userId: 1,
+    orderId: 1,
+    coin: 'BTC',
+    orderType: 'BUY',
+    amount: 5,
+    orderedAt: 1667056437499,
+    number: 1,
+    requestId: 'edcd2f0b-ba9d-40fd-bd7f-e0c71e348677',
+    listener: 'fibonacci_worker',
+    sequence: 8,
+    partner: {
+      userId: 3,
+      orderId: 3,
+      coin: 'BTC',
+      orderType: 'SALE',
+      amount: 5,
+      orderedAt: 1667056437704,
+      number: 3,
+      requestId: 'df0b60a3-5cd9-4077-9c33-d8863d487838',
+      listener: 'fibonacci_worker',
+      sequence: 8
+    }
+  }
+]
+=================Stop=================
 ```
 # Explanation with my understanding
 ``` My understanding

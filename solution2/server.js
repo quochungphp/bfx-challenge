@@ -8,9 +8,9 @@ function fibonacci (n) {
 const { PeerRPCServer }  = require('grenache-nodejs-ws')
 const Link = require('grenache-nodejs-link')
 // ex: order table
-const orderBook = [];
+let orderBook = [];
 // ex: transaction table
-const transactionOrder = [];
+let transactionOrder = [];
 
 const link = new Link({
   grape: 'http://127.0.0.1:30001'
@@ -28,6 +28,16 @@ setInterval(() => {
 }, 1000)
 
 service.on('request', (rid, listener, payload, handler) => {
+  orderBook.sort(function(a,b) {
+      if (a.orderId < b.orderId) {
+        return -1;
+      }
+      if (a.orderId > b.orderId) {
+        return 1;
+      }
+      return 0;
+  });
+
   if(payload === 'getOrderInfo') {
     handler.reply(null, orderBook);
     return;
